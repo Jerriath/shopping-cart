@@ -4,14 +4,19 @@ const Shop = () => {
 
     return (
         <div className="shop">
-            <h1>Shop</h1>
-            <ProductCard product="White"/>
-            <ProductCard product="White White"/>
-            <ProductCard product="Off-White White"/>
-            <ProductCard product="Soft White"/>
-            <ProductCard product="Hard White"/>
-            <ProductCard product="Eggshell White"/>
+            <div className="filter">
+                
+            </div>
+            <div className="products">
+                <ProductCard product="White"/>
+                <ProductCard product="White White"/>
+                <ProductCard product="Off-White White"/>
+                <ProductCard product="Soft White"/>
+                <ProductCard product="Hard White"/>
+                <ProductCard product="Eggshell White"/>
+            </div>
         </div>
+        
     )
 }
 
