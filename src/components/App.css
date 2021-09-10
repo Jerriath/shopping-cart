@@ -7,9 +7,101 @@
 }
 
 .home {
+    background: url("../imgs/backgrounds/homeBackground.jpeg") no-repeat center center fixed;
+    height: 90%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: bottom;
+}
 
+.logo {
+    font-size: 30px;
+    color: grey;
+    transition: all 0.15s linear;
+    cursor: pointer;
+    position: fixed;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+
+.logo:hover {
+    color:rgb(78, 78, 78);
+    background-color: rgba(100, 100, 100, 0.4);
+}
+
+.title {
+    width: 75%;
+}
+
+.welcomeMsg {
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    left: 200px; top: 300px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.homeShopBtn {
+    background-color: rgb(175, 196, 240);
+    font-size: 20px;
+    color: rgb(78, 78, 78);
+    height: 50px;
+    width: 100px;
+    border: none;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.homeShopBtn:hover {
+    font-size: 25px;
+    box-shadow: 5px 5px 5px black;
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(175, 196, 240);
+    padding: 0 3%;
+    height: 10%;
+    margin: 0;
 
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    margin: auto;
+}
+
+li {
+    cursor: pointer;
+    transition: 0.15s linear;
+    height: 30px;
+    width: 100px;   
+    text-align: center;
+    padding-top: 5px;
+    color: grey;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: rgba(100, 100, 100, 0.4);
+    color:rgb(78, 78, 78);
+}
+
+h1 {
+    margin: 0;
 }

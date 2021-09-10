@@ -10,8 +10,8 @@ import Contact from "./components/Contact.js";
 const Routes = () => {
   return (
     <Router>
+      <Nav />
       <Switch>
-        <Nav />
         <Route exact path="/home" component={Home} />
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/contact" component={Contact} />

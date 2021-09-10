@@ -3,7 +3,9 @@ import "./App.css";
 const Nav = () => {
     return (
         <nav>
-            <h3>Lorem Ipsum</h3>
+            <div className="title">
+                <h3 className="logo">Blindr</h3>
+            </div>
             <ul className="nav-links">
                 <li>Home</li>
                 <li>Shop</li>
