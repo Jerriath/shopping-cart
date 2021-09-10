@@ -1,4 +1,5 @@
 import "./App.css";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     return (
@@ -7,9 +8,15 @@ const Nav = () => {
                 <h3 className="logo">Blindr</h3>
             </div>
             <ul className="nav-links">
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Contact</li>
+                <Link to="/">
+                    <li>Home</li>
+                </Link>
+                <Link to="/shop">
+                    <li>Shop</li>
+                </Link>
+                <Link to="/contact">
+                    <li>Contact</li>
+                </Link>
             </ul>
         </nav>
     )
