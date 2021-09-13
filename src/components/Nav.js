@@ -7,15 +7,15 @@ const Nav = () => {
             <div className="title">
                 <h3 className="logo">Blindr</h3>
             </div>
-            <ul className="nav-links">
+            <ul className="navbar">
                 <Link to="/">
-                    <li>Home</li>
+                    <li className="nav-link">Home</li>
                 </Link>
                 <Link to="/shop">
-                    <li>Shop</li>
+                    <li className="nav-link">Shop</li>
                 </Link>
                 <Link to="/contact">
-                    <li>Contact</li>
+                    <li className="nav-link">Contact</li>
                 </Link>
             </ul>
         </nav>
