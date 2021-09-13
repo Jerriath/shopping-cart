@@ -1,5 +1,5 @@
 /*Section deals with contact styling*/
-.contact {
+.about {
     background: url("../imgs/backgrounds/contactBackground.jpg") no-repeat center center fixed;
     height: 90%;
     -webkit-background-size: cover;
@@ -8,6 +8,35 @@
     background-size: cover;
     background-position-x: left;
     background-position-y: bottom;
+}
+
+.aboutContent {
+    background-color: rgb(230, 230, 230);
+    width: 60%;
+    height: 100%;
+    margin: 0 20%;
+}
+
+.aboutTitle {
+    font-size: 30px;
+    margin-left: 5%;
+    padding-top: 2%;
+}
+
+.aboutMsg {
+    text-indent: 5%;
+    margin: 2.5%;
+}
+
+.contactMsg {
+    margin-left: 5%;
+    
+}
+
+.line {
+    width: 30%;
+    position: relative;
+    right: 350px;
 }
 
 
@@ -232,6 +261,12 @@ img {
     height: 300px;
 }
 
+h2 {
+    margin: 0;
+    
+}
+
 h3 {
     margin: auto 0;
 }
+

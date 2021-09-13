@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav.js";
 import Home from "./components/Home.js";
 import Shop from "./components/Shop.js";
-import Contact from "./components/Contact.js";
+import About from "./components/About.js";
 
 
 
@@ -14,7 +14,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/shop" component={Shop} />
-        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
       </Switch>
     </Router>
   )
