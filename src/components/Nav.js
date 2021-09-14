@@ -1,6 +1,8 @@
 import "./App.css";
 import { Link } from "react-router-dom";
 
+
+//Just a simple navbar to navigate to different pages of the website; used to navigate the router component
 const Nav = () => {
     return (
         <nav>

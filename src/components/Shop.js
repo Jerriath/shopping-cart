@@ -1,22 +1,53 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import uniqid from "uniqid";
+import ItemPage from "./ItemPage";
 
+
+//Monst complicated component; Responsible for the entire shop page
 const Shop = () => {
 
-    const [productArray, setProductArray] = useState([<ProductCard key={uniqid()} genres={["best"]} product="White"/>,
-    <ProductCard key={uniqid()} genres={["best", "favorites"]} product="White White"/>,
-    <ProductCard key={uniqid()} genres={["new", "favorites"]} product="Off-White White"/>,
-    <ProductCard key={uniqid()} genres={["best","new"]} product="Soft White"/>,
-    <ProductCard key={uniqid()} genres={["favorites", "new"]} product="Hard White"/>,
-    <ProductCard key={uniqid()} genres={["best", "favorites"]} product="Ivory White"/>,
-    <ProductCard key={uniqid()} genres={["new"]} product="Salt White"/>,
-    <ProductCard key={uniqid()} genres={["new"]} product="Porcelain White"/>,
-    <ProductCard key={uniqid()} genres={["new"]} product="Chiffon White"/>,
-    <ProductCard key={uniqid()} genres={["new"]} product="Snow White"/>]);
+    //State is used just to hold all the items currently available by the shop
+    const [productArray, setProductArray] = useState([<ProductCard onClick={displayItemPage} key={uniqid()} genres={["best"]} product="White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["best", "favorites"]} product="White White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new", "favorites"]} product="Off-White White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["best","new"]} product="Soft White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["favorites", "new"]} product="Hard White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["best", "favorites"]} product="Ivory White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new"]} product="Salt White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new"]} product="Porcelain White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new"]} product="Chiffon White"/>,
+    <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new"]} product="Snow White"/>]);
 
+    //This state is actively used and changed to reflect the filter option selected
     const [displayArray, setDisplayArray] = useState(productArray);
 
+    //This state is used to display the ItemPage a product once a product card is clicked
+    const [displayItem, setDisplayItem] = useState(null);
+
+    //function passed to the displayItemPage function to close the ItemPage
+    function closeDisplayItem() {
+        setDisplayItem(null);
+    }
+
+    //Function first gets the name of product and then uses that title to create an ItemPage
+    function displayItemPage(e) {
+        let finding = true;
+        let target = e.target;
+        while(finding) {
+            if (target.className === "productCard") {
+                finding = false;
+                continue;
+            }
+            target = target.parentElement;
+        }
+        const itemName = target.children[1].children[0].innerHTML;
+        setDisplayItem(<ItemPage itemName={itemName} onClick={closeDisplayItem} />);
+    }
+
+
+
+    //These "sort" functions are used by the filter table on the left to filter items by the options listed
     function sortByAll() {
         console.log("all");
         let array = productArray;
@@ -76,6 +107,7 @@ const Shop = () => {
             <div className="products">
                 {displayArray}
             </div>
+            {displayItem}
         </div>
     );
 }

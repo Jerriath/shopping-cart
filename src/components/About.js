@@ -1,7 +1,9 @@
 
 
+
 const About = () => {
 
+    //Simple about page; nothing really ligistically interesting or complicated
     return (
         <div className="about">
             <div className="aboutContent">

@@ -3,6 +3,7 @@ import Nav from "./components/Nav.js";
 import Home from "./components/Home.js";
 import Shop from "./components/Shop.js";
 import About from "./components/About.js";
+import Cart from "./components/Cart.js";
 
 
 
@@ -16,6 +17,7 @@ const Routes = () => {
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/about" component={About} />
       </Switch>
+      <Cart />
     </Router>
   )
 }
