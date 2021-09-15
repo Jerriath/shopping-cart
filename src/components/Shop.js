@@ -2,13 +2,14 @@ import { useState } from "react";
 import ProductCard from "./ProductCard";
 import uniqid from "uniqid";
 import ItemPage from "./ItemPage";
+import Cart from "./Cart";
 
 
 //Monst complicated component; Responsible for the entire shop page
 const Shop = () => {
 
     //State is used just to hold all the items currently available by the shop
-    const [productArray, setProductArray] = useState([<ProductCard onClick={displayItemPage} key={uniqid()} genres={["best"]} product="White"/>,
+    const [productArray] = useState([<ProductCard onClick={displayItemPage} key={uniqid()} genres={["best"]} product="White"/>,
     <ProductCard onClick={displayItemPage} key={uniqid()} genres={["best", "favorites"]} product="White White"/>,
     <ProductCard onClick={displayItemPage} key={uniqid()} genres={["new", "favorites"]} product="Off-White White"/>,
     <ProductCard onClick={displayItemPage} key={uniqid()} genres={["best","new"]} product="Soft White"/>,
@@ -24,6 +25,19 @@ const Shop = () => {
 
     //This state is used to display the ItemPage a product once a product card is clicked
     const [displayItem, setDisplayItem] = useState(null);
+
+    //This state is used to manage the cart items for handling order details
+    const [cart, setCart] = useState([]);
+
+
+    //function for adding an order to the cart
+    function addItemToOrder(item) {
+        let currentCart = cart;
+        currentCart.push(item);
+        console.log(currentCart);
+        setCart(currentCart);
+    }
+
 
     //function passed to the displayItemPage function to close the ItemPage
     function closeDisplayItem() {
@@ -42,7 +56,7 @@ const Shop = () => {
             target = target.parentElement;
         }
         const itemName = target.children[1].children[0].innerHTML;
-        setDisplayItem(<ItemPage itemName={itemName} onClick={closeDisplayItem} />);
+        setDisplayItem(<ItemPage addItemToOrder={addItemToOrder} itemName={itemName} onClick={closeDisplayItem} />);
     }
 
 
@@ -108,6 +122,7 @@ const Shop = () => {
                 {displayArray}
             </div>
             {displayItem}
+            <Cart addItemToOrder={addItemToOrder} />
         </div>
     );
 }

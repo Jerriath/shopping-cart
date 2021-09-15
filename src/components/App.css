@@ -157,25 +157,31 @@
 
 /*Styling for the shopping cart*/
 .hiddenCart {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     right: 0px;
     bottom: 0px;
+    top: 10vh;
+    margin: 0;
     width: 0%;
     height: 90vh;
     text-align: center;
+    z-index: 30;
+    transition: all 0.5s linear;
 }
 
 .displayCart {
-    display: flex;
-    flex-direction: column;
     position: fixed;
     right: 0px;
     bottom: 0px;
+    top: 10vh;
+    margin: 0;
     width: 33%;
     height: 90vh;
     text-align: center;
+    z-index: 30;
+    transition: all 0.5s linear;
+    background-color: rgb(230, 230, 230);
+    z-index: 30;
 }
 
 .cartTitle {
@@ -185,9 +191,41 @@
 }
 
 .cartBtn {
-    position: relative;
+    position: absolute;
     width: 50px;
     height: 50px;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    padding: none;
+    margin: auto 0;
+    border: 1px solid lightgrey;
+    background: url("../imgs/backgrounds/cart.png");
+    background-color: rgb(50, 50, 50);
+    background-size: 100%;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.cartBtnShowing {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    padding: none;
+    margin: auto 0;
+    border: 1px solid lightgrey;
+    background: url("../imgs/backgrounds/cart.png");
+    background-color: rgb(50, 50, 50);
+    background-size: 100%;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.cartDetails {
+
 }
 
 
@@ -277,6 +315,33 @@
 
 .checkoutBtn:hover {
     box-shadow: 5px 5px 5px grey;
+}
+
+.amount {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.amount::-webkit-outer-spin-button,
+.amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.valueChanger {
+    border: none;
+    background-color: rgba(100, 100, 100, 0.3);
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.valueChanger:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+    outline: 1px solid darkgrey;
 }
 
 

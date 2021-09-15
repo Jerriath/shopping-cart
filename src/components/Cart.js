@@ -3,30 +3,28 @@ import CartItem from "./CartItem";
 
 
 //Component for the shopping car that will slide out from the right side of the page when button is clicked
-const Cart = () => {
+const Cart = (props) => {
 
     const [cartClass, setCartClass] = useState("hiddenCart");
-    const [cart, setCart] = useState([]);
+    const [btnClass, setBtnClass] = useState("cartBtn");
 
-    function toggleCart() {
+    function toggleCart() { 
         if (cartClass === "hiddenCart") {
             setCartClass("displayCart");
+            setBtnClass("cartBtnShowing");
         }
         else {
             setCartClass("hiddenCart");
+            setBtnClass("cartBtn");
         }
-    }
-
-    function addItem(newItem) {
-        let oldCart = cart;
-        oldCart.push(newItem);
-        setCart(oldCart);
     }
 
     return (
         <div className={cartClass} >
-            <button onClick={toggleCart} className="cartBtn" />
-            <h2 className="cartTitle" >Cart</h2>
+            <button onClick={toggleCart} className={btnClass} ></button>
+            <div className="cartDetails">
+                <h2 className="cartTitle" >Cart</h2>
+            </div>
         </div>
     );
 }
