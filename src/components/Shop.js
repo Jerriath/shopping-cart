@@ -33,9 +33,23 @@ const Shop = () => {
     //function for adding an order to the cart
     function addItemToOrder(item) {
         let currentCart = cart;
-        currentCart.push(item);
-        console.log(currentCart);
-        setCart(currentCart);
+        let repeat = false;
+        let index = null;
+        for (let i = 0; i < cart.length; i++) {
+            if (currentCart[i].product === item.product) {
+                repeat = true;
+                index = i;
+            }
+        }
+        if (repeat) {
+            currentCart[index].quantity = parseInt(currentCart[index].quantity) + parseInt(item.quantity);
+            setCart(currentCart);
+        }
+        else {
+            currentCart.push(item);
+            setCart(currentCart);
+        }
+        
     }
 
 
@@ -63,13 +77,11 @@ const Shop = () => {
 
     //These "sort" functions are used by the filter table on the left to filter items by the options listed
     function sortByAll() {
-        console.log("all");
         let array = productArray;
         setDisplayArray(array);
     }
 
     function sortByBest() {
-        console.log("best");
         let array = productArray;
         array = array.filter( card => {
             console.log(card.props.genres.includes("best"));
@@ -80,7 +92,6 @@ const Shop = () => {
     }
 
     function sortByFavorites() {
-        console.log("favorites");
         let array = productArray;
         array = array.filter( (card) => {
             return card.props.genres.includes("favorites");
@@ -90,7 +101,6 @@ const Shop = () => {
     }
 
     function sortByNew() {
-        console.log("new");
         let array = productArray;
         array = array.filter( card => {
             return card.props.genres.includes("new");
@@ -122,7 +132,7 @@ const Shop = () => {
                 {displayArray}
             </div>
             {displayItem}
-            <Cart addItemToOrder={addItemToOrder} />
+            <Cart addItemToOrder={addItemToOrder} cart={cart} />
         </div>
     );
 }

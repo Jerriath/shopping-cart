@@ -1,5 +1,5 @@
 import blinds from "../imgs/products/blinds.jpeg";
-import GreyScreen from "./GreyScreen";
+import Greyscreen from "./GreyScreen";
 import IncrementScale from "./IncrementScale";
 import { useState } from "react";
 
@@ -35,6 +35,7 @@ const ItemPage = (props) => {
         };
         console.log(order);
         props.addItemToOrder(order);
+        props.onClick();
     }
 
     return (
@@ -48,7 +49,7 @@ const ItemPage = (props) => {
                     <button onClick={createOrder} className="checkoutBtn">Add to Cart</button>                    
                 </div>
             </div>
-            <GreyScreen onClick={props.onClick} />
+            <Greyscreen classProperty={"greyscreen"} onClick={props.onClick} />
         </div>
 
     )
