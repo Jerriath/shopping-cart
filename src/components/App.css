@@ -199,8 +199,8 @@
     width: 50px;
     height: 50px;
     right: 0px;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 300px;
     padding: none;
     margin: auto 0;
     border: 1px solid lightgrey;
@@ -217,8 +217,8 @@
     width: 50px;
     height: 50px;
     right: 100%;
-    top: 0;
-    bottom: 0;
+    top: 0px;
+    bottom: 300px;
     padding: none;
     margin: auto 0;
     border: 1px solid lightgrey;
@@ -231,9 +231,36 @@
 }
 
 .cartDetails {
-    height: 100%;
-    width: 100%;
+    height: 60%;
+    width: 95%;
+    margin: 0 auto;
     background-color: rgb(230, 230, 230);
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px darkgrey;
+    border-left: 1px solid rgb(200, 200, 200);
+    border-top: 1px solid rgb(200, 200, 200);
+
+}
+
+.cartDetails::-webkit-scrollbar {
+    width: 0.75em;
+    border: none;
+    background-color: none;
+    outline: none;
+}
+
+.cartDetails::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.cartDetails::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    height: auto;
+    border-radius: 15px;
+    border: none;
+    outline: none;
 }
 
 .cartGreyscreenHidden {
@@ -272,14 +299,49 @@
 }
 
 .cartLine {
-    width: 80%;
+    width: 90%;
     position: relative;
 }
 
 .cartImg {
     width: 125px;
     height: 125px;
+}
 
+.checkout {
+    height: 23%;
+    display: block;
+}
+
+.checkoutDetails {
+    width: 40%;
+    margin-left: 55%;
+    margin-right: 0;
+    height: auto;
+    text-align: right;
+    align-items: right;
+}
+
+.checkoutFont {
+    font-size: 1em;
+    width: auto;
+    text-align: right;
+}
+
+.purchase {
+    color: rgb(78, 78, 78);
+    font-size: 20px;
+    height: 40px;
+    width: 150px;
+    margin: 0;
+    border: none;
+    background-color: rgb(175, 196, 240);
+    box-shadow: 3px 3px 3px darkgrey;
+    cursor: pointer;
+}
+
+.purchase:hover {
+    box-shadow: 5px 5px 5px grey;
 }
 
 
@@ -494,6 +556,14 @@
 .nav-link:hover {
     background-color: rgba(100, 100, 100, 0.4);
     color:rgb(78, 78, 78);
+}
+
+
+
+
+/*Styling for a simple order confirmation page*/
+.thankYou {
+
 }
 
 

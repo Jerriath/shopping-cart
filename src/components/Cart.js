@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CartItem from "./CartItem";
+import CartCheckout from "./CartCheckout";
 import Greyscreen from "./GreyScreen";
 import uniqid from "uniqid";
 
@@ -36,6 +37,7 @@ const Cart = (props) => {
             <div className="cartDetails">
                 {props.cart.map((item, i) => {return <CartItem key={uniqid()} product={item.product} quantity={item.quantity}/>})}
             </div>
+            <CartCheckout cart={props.cart}/>
             <Greyscreen classProperty={screenClass} onClick={closeCart} />
         </div>
     );

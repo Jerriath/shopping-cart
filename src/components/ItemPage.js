@@ -31,7 +31,7 @@ const ItemPage = (props) => {
     function createOrder() {
         let order = {
             product: props.itemName,
-            quantity: value
+            quantity: value,
         };
         console.log(order);
         props.addItemToOrder(order);
