@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Jerriath/shopping-cart/static/css/main.aea85ae3.chunk.css",
-    "main.js": "/Jerriath/shopping-cart/static/js/main.6d1af3c3.chunk.js",
-    "main.js.map": "/Jerriath/shopping-cart/static/js/main.6d1af3c3.chunk.js.map",
-    "runtime-main.js": "/Jerriath/shopping-cart/static/js/runtime-main.8bdb6e23.js",
-    "runtime-main.js.map": "/Jerriath/shopping-cart/static/js/runtime-main.8bdb6e23.js.map",
-    "static/js/2.a955f4e8.chunk.js": "/Jerriath/shopping-cart/static/js/2.a955f4e8.chunk.js",
-    "static/js/2.a955f4e8.chunk.js.map": "/Jerriath/shopping-cart/static/js/2.a955f4e8.chunk.js.map",
-    "index.html": "/Jerriath/shopping-cart/index.html",
-    "static/css/main.aea85ae3.chunk.css.map": "/Jerriath/shopping-cart/static/css/main.aea85ae3.chunk.css.map",
-    "static/js/2.a955f4e8.chunk.js.LICENSE.txt": "/Jerriath/shopping-cart/static/js/2.a955f4e8.chunk.js.LICENSE.txt",
-    "static/media/blinds.3cf77106.jpeg": "/Jerriath/shopping-cart/static/media/blinds.3cf77106.jpeg",
-    "static/media/App.css": "/Jerriath/shopping-cart/static/media/homeBackground.12dd306e.jpeg"
+    "main.css": "/shopping-cart/static/css/main.ae920642.chunk.css",
+    "main.js": "/shopping-cart/static/js/main.6d1af3c3.chunk.js",
+    "main.js.map": "/shopping-cart/static/js/main.6d1af3c3.chunk.js.map",
+    "runtime-main.js": "/shopping-cart/static/js/runtime-main.84c7d18a.js",
+    "runtime-main.js.map": "/shopping-cart/static/js/runtime-main.84c7d18a.js.map",
+    "static/js/2.a955f4e8.chunk.js": "/shopping-cart/static/js/2.a955f4e8.chunk.js",
+    "static/js/2.a955f4e8.chunk.js.map": "/shopping-cart/static/js/2.a955f4e8.chunk.js.map",
+    "index.html": "/shopping-cart/index.html",
+    "static/css/main.ae920642.chunk.css.map": "/shopping-cart/static/css/main.ae920642.chunk.css.map",
+    "static/js/2.a955f4e8.chunk.js.LICENSE.txt": "/shopping-cart/static/js/2.a955f4e8.chunk.js.LICENSE.txt",
+    "static/media/blinds.3cf77106.jpeg": "/shopping-cart/static/media/blinds.3cf77106.jpeg",
+    "static/media/App.css": "/shopping-cart/static/media/homeBackground.12dd306e.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8bdb6e23.js",
+    "static/js/runtime-main.84c7d18a.js",
     "static/js/2.a955f4e8.chunk.js",
-    "static/css/main.aea85ae3.chunk.css",
+    "static/css/main.ae920642.chunk.css",
     "static/js/main.6d1af3c3.chunk.js"
   ]
 }
