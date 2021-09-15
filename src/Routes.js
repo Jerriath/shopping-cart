@@ -15,10 +15,10 @@ const Routes = () => {
     <Router>
       <Nav />
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route exact path="/thankyou" component={ThankYou} />
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/about" component={About} />
+        <Route path="/" component={Home} />
       </Switch>
     </Router>
   )
