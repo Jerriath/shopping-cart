@@ -563,7 +563,58 @@
 
 /*Styling for a simple order confirmation page*/
 .thankYou {
+    background: url("../imgs/backgrounds/contactBackground.jpg") no-repeat center center fixed;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    margin-top: 10vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: bottom;
+}
 
+.thankYouDetails {
+    background-color: rgb(230, 230, 230);
+    width: 60%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 5em; bottom: 0; left: 0; right: 0;
+    padding: 10% 5%;
+    align-items: center;
+    text-align: center;
+}
+
+.thankYouMsg {
+    text-align: center;
+    font-size: 60px;
+    width: 80%;
+    margin: auto;
+    color:rgb(78, 78, 78);
+}
+
+.thankYouLine {
+    width: 90%;
+    position: relative;
+}
+
+.thankYouSmallLine {
+    width: 40%;
+}
+
+.thankYouBtn {
+    color: rgb(78, 78, 78);
+    font-size: 20px;
+    height: 66px;
+    width: 200px;
+    margin: 5% auto;
+    border: none;
+    background-color: rgb(175, 196, 240);
+    box-shadow: 3px 3px 3px darkgrey;
+    cursor: pointer;
 }
 
 
